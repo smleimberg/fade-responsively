@@ -1,0 +1,100 @@
+.fr {
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow:hidden;
+	font-size: 1em;
+	background: #000;
+}
+.fr > div {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.fr-nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 12;
+	text-align: center;
+	height: 3em;
+}
+.fr-nav-element{
+	cursor: pointer;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	padding: 0.2em;
+	margin: -3em 0.5em 0.5em 0.5em;
+	vertical-align: top;
+	color: rgba(0,0,0,0.6);
+	background: #ddd;
+	background: rgba(255,255,255,0.7);
+}
+.fr-nav:hover .fr-nav-element{
+	box-shadow: 0 0 4px rgba(150,150,150,0.5);
+	margin-top: 0.5em;
+	transition: margin-top 0.5s;
+}
+.fr-nav-element.active,
+.fr-nav-element:hover{
+	background: #fff;
+	background: rgba(255,255,255,0.9);
+	transition: background 0.5s, margin-top 0.3s;
+}
+.fr-nav:hover .fr-nav-element.active{
+	transition: margin-top 0.3s;
+}
+.fr-previous,
+.fr-next{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 33%;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	z-index: 11;
+}
+.fr-previous {
+	left:0;
+	text-align: left;
+}
+.fr-next {
+	right:0;
+	text-align: right;
+}
+.fr-arrow{
+	position: absolute;
+	width: 1em	;
+	height: 1em;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	transition: all 0.5s;
+	color: #fff;
+	text-shadow: 0 0 6px rgba(0,0,0,0.8);
+	font-size: 6em;
+	text-align: center;
+}
+.fr-previous .fr-arrow{
+	left: -1em;
+}
+.fr-previous:hover .fr-arrow{
+	left: 0;
+}
+.fr-next .fr-arrow{
+	right: -1em;
+}
+.fr-next:hover .fr-arrow{
+	right: 0;
+}

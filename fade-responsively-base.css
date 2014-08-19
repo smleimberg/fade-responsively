@@ -1,0 +1,86 @@
+.fr {
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow:hidden;
+	font-size: 1em;
+	background: #000;
+}
+.fr > div {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.fr-nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 12;
+	text-align: center;
+	height: 3em;
+}
+.fr-nav-element{
+	cursor: pointer;
+	display: inline-block;
+	width: 0.5em;
+	height: 0.5em;
+	text-align: center;
+	padding: 0.2em;
+	margin: 0.5em;
+	vertical-align: bottom;
+	color: #333;
+	background: transparent;
+	border: 2px solid #fff; 
+	border-radius: 50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+}
+.fr-nav-element.active,
+.fr-nav-element:hover{
+	background: #fff;
+}
+.fr-previous,
+.fr-next{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 33%;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	z-index: 11;
+}
+.fr-previous {
+	left:0;
+	text-align: left;
+}
+.fr-next {
+	right:0;
+	text-align: right;
+}
+.fr-arrow{
+	position: absolute;
+	width: 1em	;
+	height: 1em;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	color: #fff;
+	text-shadow: 0 0 6px #000;
+	font-size: 6em;
+	text-align: center;
+}
+.fr-previous .fr-arrow{
+	left: 0;
+}
+.fr-next .fr-arrow{
+	right: 0;
+}
