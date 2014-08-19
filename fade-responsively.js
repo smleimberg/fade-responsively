@@ -1,8 +1,8 @@
-(function () {    
+jQuery(function($){ 
   var FR = (function () {
     function FR(element, options) {
     	var _ = this,timer;
-      _.settings = $.extend($.fn.fr.defaults, options);
+      _.settings = $.extend($.fn.fade_responsively.defaults, options);
       _.$e = $(element);
       if (_.settings.divArray !== null) {
         for (i = 0; i < _.settings.divArray.length; i++){
@@ -33,7 +33,7 @@
       _.zindexCurrent = 10;
       _.zindexSiblings = 9;
       if(_.settings.backstretch){
-        _.$e.css({'z-index':-1,'position':'fixed'});
+        _.$e.css('z-index',-1);
         _.zindexCurrent = -9;
         _.zindexSiblings = -10;
       }
@@ -123,7 +123,7 @@
     };
     return FR;
   })(); //end FR
-  $.fn.fr = function (options) {
+  $.fn.fade_responsively = function (options) {
     var instance;
     instance = this.data('fr');
     if (!instance) {
@@ -135,7 +135,7 @@
     if ($.type(options) === 'string') instance[options]();
     return this;
   };
-  $.fn.fr.defaults = {
+  $.fn.fade_responsively.defaults = {
       autoPlay: true,
       speed: 100,
       duration: 5000,
@@ -151,5 +151,5 @@
       backstretch: false,
       divArray: null
   };
-}).call(this);
+});
 if (typeof FRCallback == 'function') { FRCallback(); }
